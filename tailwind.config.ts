@@ -52,6 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+                renda: {
+                    DEFAULT: '#FFA500',
+                    dark: '#E67300',
+                    light: '#FFB733',
+                    'super-light': '#FFD699',
+                    foreground: '#000000'
+                },
+                rendaGold: {
+                    DEFAULT: '#FFD700',
+                    dark: '#B8860B',
+                    light: '#FFEB99'
+                },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +96,49 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'pulse-gold': {
+                    '0%, 100%': {
+                        boxShadow: '0 0 0 0 rgba(255, 215, 0, 0.7)'
+                    },
+                    '50%': {
+                        boxShadow: '0 0 0 15px rgba(255, 215, 0, 0)'
+                    }
+                },
+                'float': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)'
+                    },
+                    '50%': {
+                        transform: 'translateY(-10px)'
+                    }
+                },
+                'bounce-light': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)',
+                        animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+                    },
+                    '50%': {
+                        transform: 'translateY(-5px)',
+                        animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+                    }
+                },
+                'gradient-x': {
+                    '0%, 100%': {
+                        backgroundPosition: '0% 50%'
+                    },
+                    '50%': {
+                        backgroundPosition: '100% 50%'
+                    }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'pulse-gold': 'pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'float': 'float 3s ease-in-out infinite',
+                'bounce-light': 'bounce-light 1.5s infinite',
+                'gradient-x': 'gradient-x 3s ease infinite'
 			}
 		}
 	},
