@@ -1,4 +1,3 @@
-
 import { ResponsiveContainer } from "../ResponsiveContainer";
 import { CTAButton } from "../CTAButton";
 import { motion } from "framer-motion";
@@ -81,12 +80,12 @@ export function InvestmentSection() {
               <p className="uppercase tracking-wider text-gray-400">Investimento único</p>
               
               <div>
-                <p className="text-gray-400 line-through text-xl">De R$1.997,00 por</p>
+                <p className="text-gray-400 line-through text-xl">De R$3.997,00 por</p>
                 <div className="mt-1 flex items-center justify-center">
                   <p className="text-2xl mr-2">12x</p>
-                  <p className="text-6xl font-bold text-renda">R$97</p>
+                  <p className="text-6xl font-bold text-renda">R$9,74</p>
                 </div>
-                <p className="text-gray-300 mt-1">ou R$997 à vista</p>
+                <p className="text-gray-300 mt-1">ou R$97,00 à vista</p>
               </div>
               
               <div className="bg-gray-800 p-4 rounded-lg">
@@ -94,7 +93,7 @@ export function InvestmentSection() {
                   🎁 <span className="font-bold">Hoje</span> você também ganha todos os <span className="text-renda font-bold">bônus exclusivos</span>
                 </p>
                 <p className="text-sm text-gray-400 mt-1">
-                  Valor total: R$991,00
+                  Valor total: R$2.097,00
                 </p>
               </div>
               

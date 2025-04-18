@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CTAButton } from "./CTAButton";
@@ -88,8 +87,14 @@ export function ExitPopup() {
                   href={ctaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="block w-full md:w-auto"
                 >
-                  <CTAButton size="lg" pulse arrow className="w-full">
+                  <CTAButton 
+                    size="lg" 
+                    pulse 
+                    arrow 
+                    className="w-full whitespace-normal py-4 px-6 text-base md:text-xl animate-[pulse_3s_cubic-bezier(0.4,0,0.6,1)_infinite]"
+                  >
                     APROVEITAR OFERTA ESPECIAL
                   </CTAButton>
                 </a>

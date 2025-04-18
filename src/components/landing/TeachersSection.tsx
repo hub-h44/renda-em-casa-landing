@@ -51,25 +51,25 @@ function TeacherCard({ name, role, bio, image, achievements, index }: TeacherCar
 export function TeachersSection() {
   const teachers = [
     {
-      name: "Thiago Souza",
-      role: "Fundador e Mentor Principal",
-      bio: "Especialista em marketing digital e empreendedorismo online, Thiago ajudou mais de 3.500 alunos a conquistarem independência financeira.",
+      name: "Thiago Hora",
+      role: "Empresário",
+      bio: "Criador do Sua Renda em Casa que fatura múltiplos 6 dígitos ao mês com a venda de produtos físicos, digitais e serviços.",
       image: "",
       achievements: [
-        "Gerou mais de R$5 milhões em vendas online nos últimos 3 anos",
-        "Criou um método exclusivo para trabalhar de casa com resultados reais",
-        "Mentoria para mais de 3.500 alunos com histórias de sucesso comprovadas"
+        "Criador do método Sua Renda em Casa",
+        "Especialista em produtos físicos e digitais",
+        "Expert em vendas de serviços"
       ]
     },
     {
-      name: "Nathalia Martins",
-      role: "Especialista em Marketing Digital",
-      bio: "Com expertise em estratégias de marketing e vendas online, Nathalia traz métodos práticos e atualizados para o mundo digital.",
+      name: "Nathalia Narrima",
+      role: "Empreendedora",
+      bio: "Empresária e social media, especialista em vendas de serviços visuais.",
       image: "",
       achievements: [
-        "Especialista em tráfego pago com mais de R$1 milhão em ROI para clientes",
-        "Desenvolveu estratégias utilizadas por grandes empresas do mercado",
-        "Professora convidada em eventos internacionais de marketing digital"
+        "Especialista em social media",
+        "Expert em vendas de serviços visuais",
+        "Mentora de empreendedores digitais"
       ]
     }
   ];

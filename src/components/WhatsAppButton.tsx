@@ -1,12 +1,11 @@
-
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false);
-  const whatsappNumber = "5521999999999"; // Replace with your actual WhatsApp number
-  const whatsappMessage = encodeURIComponent("Olá! Tenho interesse no treinamento Sua Renda em Casa e gostaria de mais informações.");
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumber = "553196307593";
+  const whatsappMessage = encodeURIComponent("Olá, vim do site 'Sua renda em casa' e preciso de suporte...");
+  const whatsappUrl = `https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=${whatsappMessage}&type=phone_number&app_absent=0`;
 
   return (
     <div className="fixed bottom-6 right-6 z-50">

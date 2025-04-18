@@ -1,4 +1,3 @@
-
 import { ResponsiveContainer } from "../ResponsiveContainer";
 import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -25,34 +24,24 @@ function FAQItem({ question, answer, value }: FAQItemProps) {
 export function FAQSection() {
   const faqs = [
     {
-      question: "Quanto tempo leva para ver resultados?",
-      answer: "Isso varia de pessoa para pessoa, dependendo da dedicação e aplicação do método. Temos alunos que começaram a ver resultados já na primeira semana, enquanto outros levaram cerca de 1 a 2 meses. O importante é seguir o passo a passo e aplicar as estratégias consistentemente.",
+      question: "Por onde receberei o curso?",
+      answer: "Após realizar sua inscrição, seu acesso será enviado diretamente em seu e-mail cadastrado.",
       value: "item-1"
     },
     {
-      question: "Preciso ter experiência prévia?",
-      answer: "Não! O treinamento foi desenvolvido pensando em iniciantes. Ensinamos tudo do zero, de forma detalhada e com suporte para tirar suas dúvidas. Você não precisa ter conhecimento técnico ou experiência anterior.",
+      question: "Quais são as formas de pagamento?",
+      answer: "Você pode pagar via boleto, pix ou cartão de crédito em até 12x!",
       value: "item-2"
     },
     {
-      question: "Quanto tempo preciso dedicar por dia?",
-      answer: "Recomendamos que você dedique pelo menos 1 hora por dia nos primeiros 30 dias para absorver o conteúdo e começar a implementar. Depois desse período inicial, você pode ajustar sua rotina conforme seus objetivos e disponibilidade.",
+      question: "E se eu me arrepender?",
+      answer: "Em caso de arrependimento, basta nos enviar uma mensagem que devolvemos todo o seu investimento em até 7 dias após sua compra.",
       value: "item-3"
     },
     {
-      question: "O que acontece depois da compra?",
-      answer: "Imediatamente após a confirmação do pagamento, você receberá um e-mail com as instruções de acesso à plataforma do curso. Lá você encontrará todas as aulas, materiais de apoio e acesso à comunidade privada. O suporte também estará disponível para ajudar em qualquer questão técnica.",
+      question: "Em quanto tempo terei resultados?",
+      answer: "SE VOCÊ NÃO FIZER UMA NOVA RENDA DIGITAL EM 1 MÊS, DEVOLVO SEU DINHEIRO E AINDA TE DOU R$100 REAIS NO PIX",
       value: "item-4"
-    },
-    {
-      question: "Como funciona a garantia?",
-      answer: "Oferecemos uma garantia incondicional de 7 dias. Se durante este período você sentir que o treinamento não é para você, basta solicitar o reembolso e devolveremos 100% do seu investimento, sem perguntas. Além disso, se você aplicar o método e não tiver resultados, devolvemos seu dinheiro + R$100.",
-      value: "item-5"
-    },
-    {
-      question: "Posso assistir às aulas no celular?",
-      answer: "Sim! Nossa plataforma é totalmente responsiva, permitindo que você assista às aulas em qualquer dispositivo. No entanto, para realizar as atividades práticas, recomendamos o uso de um computador ou notebook para maior conforto e produtividade.",
-      value: "item-6"
     }
   ];
 

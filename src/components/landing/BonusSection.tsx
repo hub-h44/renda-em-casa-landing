@@ -1,4 +1,3 @@
-
 import { ResponsiveContainer } from "../ResponsiveContainer";
 import { motion } from "framer-motion";
 import { Gift } from "lucide-react";
@@ -65,23 +64,16 @@ export function BonusSection() {
   const bonuses = [
     {
       number: 1,
-      title: "Guia de Produtividade Máxima",
-      description: "Aprenda a organizar seu tempo para maximizar resultados enquanto trabalha de casa.",
-      originalValue: "R$ 197,00",
+      title: "Aulas ao vivo 3 vezes por semana",
+      description: "Acesso exclusivo às aulas ao vivo para tirar dúvidas e acelerar seu aprendizado.",
+      originalValue: "R$ 2.000,00",
       image: "", // Add image path if needed
     },
     {
       number: 2,
-      title: "25 Templates Premium",
-      description: "Modelos prontos para usar e acelerar sua curva de aprendizado sem perder tempo.",
-      originalValue: "R$ 297,00",
-      image: "", // Add image path if needed
-    },
-    {
-      number: 3,
-      title: "Mentorias em Grupo (3 meses)",
-      description: "Acesso a sessões semanais de mentoria para tirar dúvidas e acelerar seus resultados.",
-      originalValue: "R$ 497,00",
+      title: "Aprenda o caminho para fechar seus primeiros clientes em tempo recorde",
+      description: "Você quer ter clientes que te pagam todos os meses prestando serviços? Neste bônus você entenderá como fechar cada vez mais clientes em tempo recorde.",
+      originalValue: "R$ 97,00",
       image: "", // Add image path if needed
     },
   ];
@@ -108,7 +100,7 @@ export function BonusSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {bonuses.map((bonus, index) => (
             <BonusCard
               key={index}
@@ -130,7 +122,7 @@ export function BonusSection() {
           className="mt-12 text-center"
         >
           <p className="text-lg font-bold mb-6">
-            Valor total dos bônus: <span className="text-renda">R$ 991,00</span>
+            Valor total dos bônus: <span className="text-renda">R$ 2.097,00</span>
           </p>
           <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg inline-block">
             <p className="text-yellow-800 dark:text-yellow-200 font-medium">
