@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CTAButton } from "./CTAButton";
 import { X } from "lucide-react";
 
 export function ExitPopup() {
@@ -112,3 +111,4 @@ export function ExitPopup() {
     </AnimatePresence>
   );
 }
+
