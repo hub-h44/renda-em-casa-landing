@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CTAButton } from "./CTAButton";
@@ -12,25 +13,16 @@ export function ExitPopup() {
     // Set up the exit intent detection
     const handleMouseLeave = (e: MouseEvent) => {
       // Only trigger if the mouse is leaving from the top of the page
-      if (e.clientY <= 0 && !hasShown && document.body.scrollTop > 100) {
+      if (e.clientY <= 0 && !hasShown) {
         setShowPopup(true);
         setHasShown(true);
       }
     };
 
-    // Also trigger after a certain amount of time on the page
-    const timeoutId = setTimeout(() => {
-      if (!hasShown) {
-        setShowPopup(true);
-        setHasShown(true);
-      }
-    }, 40000); // 40 seconds
-
     document.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave);
-      clearTimeout(timeoutId);
     };
   }, [hasShown]);
 
@@ -69,34 +61,41 @@ export function ExitPopup() {
                   ⏱️ Esta oferta expira em <span className="font-bold">24 horas</span>
                 </p>
               </div>
-              
-              <div className="text-center mb-6">
-                <p className="text-gray-600 dark:text-gray-300 line-through mb-1">
-                  Valor normal: R$997,00
-                </p>
-                <p className="text-2xl font-bold">
-                  Hoje: <span className="text-renda">R$697,00</span>
-                </p>
-                <p className="text-sm text-gray-500">
-                  ou 12x de R$67,92 no cartão
-                </p>
+
+              <div className="space-y-4 mb-6">
+                <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
+                  <p className="font-bold">🎁 Bônus 1: Aulas ao vivo 3x por semana</p>
+                  <p className="text-gray-600 dark:text-gray-400 line-through">Valor: R$2.000,00</p>
+                  <p className="font-bold text-renda">GRÁTIS para você!</p>
+                </div>
+
+                <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
+                  <p className="font-bold">🎯 Bônus 2: Método rápido para fechar clientes</p>
+                  <p className="text-gray-600 dark:text-gray-400 line-through">Valor: R$97,00</p>
+                  <p className="font-bold text-renda">GRÁTIS para você!</p>
+                </div>
               </div>
               
               <div className="text-center">
+                <p className="text-gray-600 dark:text-gray-300 line-through mb-1">
+                  Valor normal: R$997,00
+                </p>
+                <p className="text-2xl font-bold mb-2">
+                  Hoje: <span className="text-renda">R$697,00</span>
+                </p>
+                <p className="text-sm text-gray-500 mb-4">
+                  ou 12x de R$67,92 no cartão
+                </p>
+                
                 <a 
                   href={ctaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full md:w-auto"
+                  className="block w-full"
                 >
-                  <CTAButton 
-                    size="lg" 
-                    pulse 
-                    arrow 
-                    className="w-full whitespace-normal py-4 px-6 text-base md:text-xl animate-[pulse_3s_cubic-bezier(0.4,0,0.6,1)_infinite]"
-                  >
+                  <button className="w-full py-4 px-6 text-xl font-bold uppercase tracking-wider bg-renda text-black rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-[pulse_3s_ease-in-out_infinite]">
                     APROVEITAR OFERTA ESPECIAL
-                  </CTAButton>
+                  </button>
                 </a>
                 
                 <button 

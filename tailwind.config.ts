@@ -99,10 +99,10 @@ export default {
 				},
                 'pulse-gold': {
                     '0%, 100%': {
-                        boxShadow: '0 0 0 0 rgba(255, 215, 0, 0.7)'
+                        boxShadow: '0 0 0 0 rgba(255, 215, 0, 0.4)'
                     },
                     '50%': {
-                        boxShadow: '0 0 0 15px rgba(255, 215, 0, 0)'
+                        boxShadow: '0 0 0 10px rgba(255, 215, 0, 0)'
                     }
                 },
                 'float': {
@@ -135,7 +135,7 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-                'pulse-gold': 'pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'pulse-gold': 'pulse-gold 3s ease-in-out infinite',
                 'float': 'float 3s ease-in-out infinite',
                 'bounce-light': 'bounce-light 1.5s infinite',
                 'gradient-x': 'gradient-x 3s ease infinite'
