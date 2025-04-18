@@ -77,13 +77,13 @@ export function ExitPopup() {
               
               <div className="text-center">
                 <p className="text-gray-600 dark:text-gray-300 line-through mb-1">
-                  Valor normal: R$997,00
+                  Valor normal: R$3.997,00
                 </p>
                 <p className="text-2xl font-bold mb-2">
-                  Hoje: <span className="text-renda">R$697,00</span>
+                  Hoje: <span className="text-renda">12x de R$9,74</span>
                 </p>
                 <p className="text-sm text-gray-500 mb-4">
-                  ou 12x de R$67,92 no cartão
+                  Ou R$97,00 à vista!
                 </p>
                 
                 <a 
@@ -111,4 +111,3 @@ export function ExitPopup() {
     </AnimatePresence>
   );
 }
-
