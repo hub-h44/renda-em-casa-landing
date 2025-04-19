@@ -21,11 +21,11 @@ function TeacherCard({ name, role, bio, image, achievements, index }: TeacherCar
       transition={{ duration: 0.5, delay: index * 0.2 }}
       className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
     >
-      <div className="h-64 overflow-hidden">
+      <div className="h-96 md:h-[500px] lg:h-[600px] overflow-hidden">
         <img
-          src={image || `/lovable-uploads/78529986-587d-4dab-8640-2c1a0a1aba30.png`}
+          src={image}
           alt={name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
       </div>
       
@@ -109,3 +109,4 @@ export function TeachersSection() {
     </section>
   );
 }
+
