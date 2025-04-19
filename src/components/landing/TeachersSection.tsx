@@ -54,7 +54,7 @@ export function TeachersSection() {
       name: "Thiago Hora",
       role: "Empresário",
       bio: "Criador do Sua Renda em Casa que fatura múltiplos 6 dígitos ao mês com a venda de produtos físicos, digitais e serviços.",
-      image: "",
+      image: "https://s3.h44.site/n8nbucket/Sua-Renda-em-casa-pv-Sua-renda-em-casa-04-18-2025_11_39_PM.png",
       achievements: [
         "Criador do método Sua Renda em Casa",
         "Especialista em produtos físicos e digitais",
@@ -65,7 +65,7 @@ export function TeachersSection() {
       name: "Nathalia Narrima",
       role: "Empreendedora",
       bio: "Empresária e social media, especialista em vendas de serviços visuais.",
-      image: "",
+      image: "https://s3.h44.site/n8nbucket/Sua-Renda-em-casa-pv-Suaa-renda-em-casa-04-18-2025_11_39_PM.png",
       achievements: [
         "Especialista em social media",
         "Expert em vendas de serviços visuais",
