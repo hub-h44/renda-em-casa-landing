@@ -9,9 +9,7 @@ export function ExitPopup() {
   const ctaUrl = "https://pay.kiwify.com.br/sUqnazH?afid=oKKz1xM8?utm_source=landingpage&utm_medium=exitpopup&utm_campaign=sua_renda";
 
   useEffect(() => {
-    // Set up the exit intent detection
     const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if the mouse is leaving from the top of the page
       if (e.clientY <= 0 && !hasShown) {
         setShowPopup(true);
         setHasShown(true);
@@ -19,10 +17,7 @@ export function ExitPopup() {
     };
 
     document.addEventListener("mouseleave", handleMouseLeave);
-
-    return () => {
-      document.removeEventListener("mouseleave", handleMouseLeave);
-    };
+    return () => document.removeEventListener("mouseleave", handleMouseLeave);
   }, [hasShown]);
 
   return (
@@ -40,7 +35,7 @@ export function ExitPopup() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="relative w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-2xl my-4"
+            className="relative w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-2xl max-h-[90vh] overflow-y-auto my-4"
           >
             <button
               onClick={() => setShowPopup(false)}
@@ -50,25 +45,18 @@ export function ExitPopup() {
               <X size={20} />
             </button>
             
-            <div className="bg-gradient-to-r from-renda/20 to-rendaGold/20 p-4">
-              <h3 className="text-xl font-bold text-center">
-                Espere! Oferta Especial <span className="text-renda">Exclusiva</span>
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-center mb-4">
+                Oferta Especial <span className="text-renda">Exclusiva</span>
               </h3>
-            </div>
-            
-            <div className="p-4 space-y-4">
-              <p className="text-base">
-                Para você que chegou até aqui, temos uma condição especial: 
-                <strong className="text-renda"> 30% OFF</strong> nas próximas 24 horas!
-              </p>
               
-              <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800">
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 mb-4">
                 <p className="font-medium text-center text-sm">
                   ⏱️ Esta oferta expira em <span className="font-bold">24 horas</span>
                 </p>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-3 mb-4">
                 <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
                   <p className="font-bold text-sm">🎁 Bônus 1: Aulas ao vivo 3x por semana</p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm line-through">Valor: R$2.000,00</p>
@@ -103,13 +91,6 @@ export function ExitPopup() {
                     APROVEITAR OFERTA ESPECIAL
                   </button>
                 </a>
-                
-                <button 
-                  onClick={() => setShowPopup(false)}
-                  className="mt-3 text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-                >
-                  Não, prefiro pagar o valor integral mais tarde
-                </button>
               </div>
             </div>
           </motion.div>
