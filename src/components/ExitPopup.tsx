@@ -28,16 +28,16 @@ export function ExitPopup() {
   return (
     <AnimatePresence>
       {showPopup && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 overflow-y-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="relative w-full max-w-lg bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden"
+            className="relative w-full max-w-lg bg-white dark:bg-gray-800 rounded-lg shadow-2xl my-4"
           >
             <button
               onClick={() => setShowPopup(false)}
-              className="absolute top-2 right-2 p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+              className="absolute top-2 right-2 p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors z-10"
               aria-label="Fechar"
             >
               <X size={20} />
