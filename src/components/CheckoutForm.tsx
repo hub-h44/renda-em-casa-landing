@@ -34,6 +34,20 @@ export function CheckoutForm({ open, onOpenChange }: CheckoutFormProps) {
   });
 
   const onSubmit = (data: FormData) => {
+    // Push form submission event and data to GTM dataLayer
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'form_submission',
+        form_name: 'checkout_form',
+        form_id: 'checkout_lead_form',
+        user_data: {
+          name: data.name,
+          email: data.email,
+          phone: data.phone
+        }
+      });
+    }
+
     // Construct URL with parameters
     const checkoutUrl = `${checkoutBaseUrl}&name=${encodeURIComponent(data.name)}&email=${encodeURIComponent(data.email)}&phone=${encodeURIComponent(data.phone)}`;
     
@@ -50,7 +64,7 @@ export function CheckoutForm({ open, onOpenChange }: CheckoutFormProps) {
         </DialogHeader>
         
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" id="checkout_lead_form">
             <FormField
               control={form.control}
               name="name"
@@ -104,3 +118,4 @@ export function CheckoutForm({ open, onOpenChange }: CheckoutFormProps) {
     </Dialog>
   );
 }
+
