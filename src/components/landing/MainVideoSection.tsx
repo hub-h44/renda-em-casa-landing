@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 export function MainVideoSection() {
   const mainVideoUrl = "https://www.youtube.com/embed/kq8K_CYZXGU?controls=0&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Fsuarendadigitalemcasa.com.br&widgetid=1";
-  const ctaUrl = "https://pay.kiwify.com.br/sUqnazH?afid=oKKz1xM8?utm_source=landingpage&utm_medium=cta&utm_campaign=sua_renda";
 
   return (
     <section className="py-16 bg-gradient-to-b from-black to-gray-900">

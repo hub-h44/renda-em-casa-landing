@@ -1,10 +1,17 @@
+
 import { ResponsiveContainer } from "../ResponsiveContainer";
 import { CTAButton } from "../CTAButton";
 import { motion } from "framer-motion";
 import { ShieldCheck, Clock, Award } from "lucide-react";
+import { useState } from "react";
+import { CheckoutForm } from "../CheckoutForm";
 
 export function InvestmentSection() {
-  const ctaUrl = "https://pay.kiwify.com.br/sUqnazH?afid=oKKz1xM8?utm_source=landingpage&utm_medium=cta&utm_campaign=sua_renda";
+  const [showForm, setShowForm] = useState(false);
+
+  const handlePurchaseClick = () => {
+    setShowForm(true);
+  };
 
   return (
     <section className="py-16 bg-gray-900 text-white">
@@ -97,16 +104,12 @@ export function InvestmentSection() {
                 </p>
               </div>
               
-              <a 
-                href={ctaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
+              <button 
+                onClick={handlePurchaseClick}
+                className="w-full py-6 px-8 text-xl font-extrabold uppercase tracking-wider bg-gradient-to-r from-renda-dark via-renda to-rendaGold text-black rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-pulse-gold"
               >
-                <button className="w-full py-6 px-8 text-xl font-extrabold uppercase tracking-wider bg-gradient-to-r from-renda-dark via-renda to-rendaGold text-black rounded-lg transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-pulse-gold">
-                  QUERO GARANTIR MINHA VAGA AGORA
-                </button>
-              </a>
+                QUERO GARANTIR MINHA VAGA AGORA
+              </button>
               
               <p className="text-sm text-gray-400">
                 Pagamento 100% seguro via Kiwify. Parcelamento em até 12x no cartão.
@@ -129,6 +132,11 @@ export function InvestmentSection() {
             </div>
           </motion.div>
         </div>
+        
+        <CheckoutForm 
+          open={showForm} 
+          onOpenChange={setShowForm} 
+        />
       </ResponsiveContainer>
     </section>
   );

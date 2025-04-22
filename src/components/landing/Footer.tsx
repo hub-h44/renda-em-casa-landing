@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { CTAButton } from "../CTAButton";
 
 export function Footer() {
-  const ctaUrl = "https://pay.kiwify.com.br/sUqnazH?afid=oKKz1xM8?utm_source=landingpage&utm_medium=cta&utm_campaign=sua_renda";
   const currentYear = new Date().getFullYear();
 
   return (
@@ -26,15 +25,9 @@ export function Footer() {
               Comece hoje mesmo a construir um futuro melhor trabalhando do conforto da sua casa.
             </p>
             
-            <a 
-              href={ctaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CTAButton size="lg" pulse arrow>
-                QUERO COMEÇAR AGORA
-              </CTAButton>
-            </a>
+            <CTAButton size="lg" pulse arrow>
+              QUERO COMEÇAR AGORA
+            </CTAButton>
           </motion.div>
         </div>
 

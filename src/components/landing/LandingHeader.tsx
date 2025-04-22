@@ -4,8 +4,6 @@ import { CTAButton } from "../CTAButton";
 import { motion } from "framer-motion";
 
 export function LandingHeader() {
-  const ctaUrl = "https://pay.kiwify.com.br/sUqnazH?afid=oKKz1xM8?utm_source=landingpage&utm_medium=cta&utm_campaign=sua_renda";
-
   return (
     <header className="bg-black text-white py-8 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent opacity-90 z-0"></div>
