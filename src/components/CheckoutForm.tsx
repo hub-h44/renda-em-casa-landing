@@ -11,6 +11,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 interface CheckoutFormProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  source?: 'checkout_form' | 'pop-up_exit';
 }
 
 const formSchema = z.object({
@@ -21,7 +22,11 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
-export function CheckoutForm({ open, onOpenChange }: CheckoutFormProps) {
+export function CheckoutForm({ 
+  open, 
+  onOpenChange, 
+  source = 'checkout_form' 
+}: CheckoutFormProps) {
   const checkoutBaseUrl = "https://pay.kiwify.com.br/sUqnazH?afid=oKKz1xM8&src=Robson_e_Daniela";
   
   const form = useForm<FormData>({
@@ -38,7 +43,7 @@ export function CheckoutForm({ open, onOpenChange }: CheckoutFormProps) {
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
         event: 'form_submission',
-        form_name: 'checkout_form',
+        form_name: source,
         form_id: 'checkout_lead_form',
         user_data: {
           name: data.name,
@@ -118,4 +123,3 @@ export function CheckoutForm({ open, onOpenChange }: CheckoutFormProps) {
     </Dialog>
   );
 }
-

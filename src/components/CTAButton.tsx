@@ -50,6 +50,7 @@ export function CTAButton({
       <CheckoutForm 
         open={showForm} 
         onOpenChange={setShowForm} 
+        source="checkout_form"
       />
     </>
   );

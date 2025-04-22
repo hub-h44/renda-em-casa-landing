@@ -30,6 +30,7 @@ export function ExitPopup() {
       <CheckoutForm 
         open={showForm} 
         onOpenChange={setShowForm} 
+        source="pop-up_exit"
       />
       
       <AnimatePresence>
